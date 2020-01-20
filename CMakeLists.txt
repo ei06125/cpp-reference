@@ -7,6 +7,8 @@ project(CppTemplateProject)
 # =============================================================================
 # Compiler settings
 # -----------------------------------------------------------------------------
+# TODO: Use CMAKE_CXX_KNOWN_FEATURES instead of setting CMAKE_CXX_STANDARD
+# https://cmake.org/cmake/help/v3.16/prop_gbl/CMAKE_CXX_KNOWN_FEATURES.html
 set(CMAKE_CXX_STANDARD 11)
 
 # =============================================================================
