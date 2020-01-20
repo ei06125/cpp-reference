@@ -1,3 +1,4 @@
+#include <functional>
 #include <iostream>
 
 /******************************************************************************
@@ -6,6 +7,6 @@
  * ... then passes them to the application, which simply uses them.
  *****************************************************************************/
 int main() {
-    std::cout << "Hello world\n";
-    return 0;
+	[out = std::ref(std::cout << "Hello ")]() { out.get() << "Pedro\n"; }();
+	return 0;
 }

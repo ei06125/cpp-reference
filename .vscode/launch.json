@@ -8,7 +8,7 @@
             "name": "Main",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "program": "/${fileDirname}/output/${fileBasenameNoExtension}",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -22,7 +22,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "g++-8 build active file",
+            "preLaunchTask": "make",
             "miDebuggerPath": "/usr/bin/gdb"
         }
     ]
