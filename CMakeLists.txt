@@ -21,3 +21,7 @@ include(scripts/cmake/ConfigureWorkspace.cmake)
 # -----------------------------------------------------------------------------
 add_executable(main main.cpp)
 target_compile_features(main PRIVATE cxx_lambda_init_captures)
+
+enable_testing()
+add_executable(tester tester.cpp)
+add_test(Tester tester)
