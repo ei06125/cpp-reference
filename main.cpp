@@ -1,5 +1,4 @@
-#include <functional>
-#include <iostream>
+#include "pch.hpp"
 
 /******************************************************************************
  * @brief Application entry point
