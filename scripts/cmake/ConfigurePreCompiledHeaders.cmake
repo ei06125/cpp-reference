@@ -13,7 +13,7 @@ if(${CMAKE_VERSION} LESS 16)
     add_custom_command(
       TARGET pch
       POST_BUILD
-      COMMAND g++ ${ProjectIncludeFolder}/pch.hpp)
+      COMMAND g++ -std=c++11 ${ProjectIncludeFolder}/pch.hpp)
   endif()
 
   function(target_precompile_headers target scope header)
