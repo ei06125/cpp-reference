@@ -25,4 +25,6 @@ target_compile_features(main PRIVATE cxx_lambda_init_captures)
 target_include_directories(main PUBLIC ${ProjectIncludeFolder})
 target_precompile_headers(main PRIVATE ${ProjectIncludeFolder}/pch.hpp)
 
-# enable_testing() add_executable(tester tester.cpp) add_test(Tester tester)
+enable_testing()
+add_executable(tester tester.cpp)
+add_test(Tester tester)
