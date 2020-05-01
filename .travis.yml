@@ -10,7 +10,8 @@ addons:
     packages:
       - g++-8
   snaps:
-    - cmake
+    - name: cmake
+      confinement: classic
 
 script:
   - cmake .
