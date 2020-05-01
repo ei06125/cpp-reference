@@ -1,5 +1,5 @@
 dist: bionic
-sudo: false
+sudo: true
 language: cpp
 
 addons:
@@ -8,6 +8,15 @@ addons:
       - g++-8
 
 script:
+  - mkdir downloads && cd downloads
+  - wget https://github.com/Kitware/CMake/releases/download/v3.17.2/cmake-3.17.2.tar.gz
+  - tar -zxvf cmake-3.17.2.tar.gz
+  - cd cmake
+  - ./bootstrap
+  - make -j2
+  - make install
+  - cd ..
+  - cd ..
   - CXX=/usr/bin/g++-8 CC=/usr/bin/gcc-8 cmake .
   - cmake --build . -- -j2
   - ctest -j2
