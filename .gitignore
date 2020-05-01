@@ -1,6 +1,9 @@
 # Created by Pedro André Oliveira
 output/
 vscode-build/
+build
+vs-build/
+.clangd
 
 # Created by https://www.gitignore.io/api/c,c++,node,clion,visualstudio,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=c,c++,node,clion,visualstudio,visualstudiocode
