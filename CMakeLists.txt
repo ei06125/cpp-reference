@@ -1,7 +1,7 @@
 # =============================================================================
 # General settings
 # -----------------------------------------------------------------------------
-cmake_minimum_required(VERSION 3.9)
+cmake_minimum_required(VERSION 3.17)
 project(CppTemplateProject)
 
 # =============================================================================
@@ -15,7 +15,6 @@ project(CppTemplateProject)
 # Workspace settings
 # -----------------------------------------------------------------------------
 include(scripts/cmake/ConfigureWorkspace.cmake)
-include(scripts/cmake/ConfigurePreCompiledHeaders.cmake)
 
 # =============================================================================
 # Target settings

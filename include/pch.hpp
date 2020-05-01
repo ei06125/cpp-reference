@@ -1,6 +1,5 @@
 #ifndef PRE_COMPILED_HEADER
 #define PRE_COMPILED_HEADER
-#pragma once
 
 #include <algorithm>
 #include <chrono>
