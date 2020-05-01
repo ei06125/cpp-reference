@@ -11,7 +11,9 @@ compiler:
   - gcc
 
 # the install step will take care of deploying a newer cmake version
-install:    
+install:
+  - ls
+  - pwd
   # first we create a directory for the CMake binaries
   - DEPS_DIR="${TRAVIS_BUILD_DIR}/deps"
   - mkdir ${DEPS_DIR} && cd ${DEPS_DIR}
@@ -27,6 +29,8 @@ install:
   - PATH=${DEPS_DIR}/cmake-install:${DEPS_DIR}/cmake-install/bin:$PATH
   # don't forget to switch back to the main build directory once you are done
   - cd ${TRAVIS_BUILD_DIR}
+  - ls
+  - pwd
 
 # before_script:
 #   # create a build folder for the out-of-source build
