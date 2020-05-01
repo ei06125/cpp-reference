@@ -7,7 +7,7 @@ build_script:
 
     cd build
 
-    cmake c:\projects\source -G "Visual Studio 15"
+    cmake c:\projects\source -G "Visual Studio 16"
 
     cmake --build . --config "Debug"
 
