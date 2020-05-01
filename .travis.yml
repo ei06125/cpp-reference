@@ -9,7 +9,8 @@ addons:
   apt:
     packages:
       - g++-8
-      - cmake
+  snaps:
+    - cmake
 
 script:
   - cmake .
