@@ -7,16 +7,37 @@ addons:
     packages:
       - g++-8
 
+compiler:
+  - gcc
+
+# the install step will take care of deploying a newer cmake version
+install:    
+  # first we create a directory for the CMake binaries
+  - DEPS_DIR="${TRAVIS_BUILD_DIR}/deps"
+  - mkdir ${DEPS_DIR} && cd ${DEPS_DIR}
+  # we use wget to fetch the cmake binaries
+  - travis_retry wget --no-check-certificate https://github.com/Kitware/CMake/releases/download/v3.17.2/cmake-3.17.2.tar.gz
+  # extract the binaries; the output here is quite lengthy,
+  # so we swallow it to not clutter up the travis console
+  - tar -xvf cmake-3.17.2.tar.gz > /dev/null
+  - mv cmake-3.17.2 cmake-install
+  # add both the top-level directory and the bin directory from the archive
+  # to the system PATH. By adding it to the front of the path we hide the
+  # preinstalled CMake with our own.
+  - PATH=${DEPS_DIR}/cmake-install:${DEPS_DIR}/cmake-install/bin:$PATH
+  # don't forget to switch back to the main build directory once you are done
+  - cd ${TRAVIS_BUILD_DIR}
+
+# before_script:
+#   # create a build folder for the out-of-source build
+#   - mkdir build
+#   # switch to build directory
+#   - cd build
+#   # run cmake; here we assume that the project's
+#   # top-level CMakeLists.txt is located at '..'
+#   - cmake ..
+
 script:
-  - mkdir downloads && cd downloads
-  - wget https://github.com/Kitware/CMake/releases/download/v3.17.2/cmake-3.17.2.tar.gz
-  - tar -zxvf cmake-3.17.2.tar.gz
-  - cd cmake
-  - ./bootstrap
-  - make -j2
-  - make install
-  - cd ..
-  - cd ..
   - CXX=/usr/bin/g++-8 CC=/usr/bin/gcc-8 cmake .
   - cmake --build . -- -j2
   - ctest -j2
