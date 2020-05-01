@@ -5,9 +5,9 @@ language: cpp
 install:
   - wget https://github.com/Kitware/CMake/releases/download/v3.17.2/cmake-3.17.2.tar.gz -O /tmp/cmake-3.17.2.tar.gz
   - tar -xvf /tmp/cmake-3.17.2.tar.gz
-  - cd cmake-3.17.2 && ./bootstrap && make && sudo make install
+  - cd cmake-3.17.2 && ./bootstrap && make -j4 && sudo make install && cd ..
 
 script:
   - cmake .
-  - cmake --build . -- -j2
-  - ctest -j2
+  - cmake --build . -- -j4
+  - ctest -j4
