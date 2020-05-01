@@ -13,6 +13,9 @@ addons:
     - name: cmake
       confinement: classic
 
+before_script:
+  - ln -s /snap/cmake/current/bin/* /usr/bin/
+
 script:
   - cmake .
   - cmake --build . -- -j2
