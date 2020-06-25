@@ -15,6 +15,7 @@ project(CppTemplateProject)
 # Workspace settings
 # -----------------------------------------------------------------------------
 include(scripts/cmake/ConfigureWorkspace.cmake)
+include(scripts/cmake/ConfigurePreCompiledHeaders.cmake)
 
 # =============================================================================
 # Target settings
