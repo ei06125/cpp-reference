@@ -1,5 +1,5 @@
-#ifndef PRE_COMPILED_HEADER
-#define PRE_COMPILED_HEADER
+#ifndef CXX_STL_PRE_COMPILED_HEADER
+#define CXX_STL_PRE_COMPILED_HEADER
 
 #include <algorithm>
 #include <chrono>
@@ -20,4 +20,4 @@
 #include <unordered_set>
 #include <vector>
 
-#endif // PRE_COMPILED_HEADER
+#endif // CXX_STL_PRE_COMPILED_HEADER

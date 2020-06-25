@@ -1,7 +1,7 @@
 # =============================================================================
 # General settings
 # -----------------------------------------------------------------------------
-cmake_minimum_required(VERSION 3.17)
+cmake_minimum_required(VERSION 3.16)
 project(CppTemplateProject)
 
 # =============================================================================
@@ -22,7 +22,7 @@ include(scripts/cmake/ConfigureWorkspace.cmake)
 add_executable(main main.cpp)
 target_compile_features(main PRIVATE cxx_lambda_init_captures)
 target_include_directories(main PUBLIC ${ProjectIncludeFolder})
-target_precompile_headers(main PRIVATE ${ProjectIncludeFolder}/pch.hpp)
+target_precompile_headers(main PRIVATE ${ProjectIncludeFolder}/stl.hpp)
 
 enable_testing()
 add_executable(tester tester.cpp)
