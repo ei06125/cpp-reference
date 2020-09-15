@@ -1,3 +1,5 @@
-# common-project-include.include
+# common-project-include.include.in
 
+LogDebug("Executing common-project-include.include.in")
 include("${CMAKE_CURRENT_SOURCE_DIR}/project-meta-info.in")
+LogDebug("Executing common-project-include.include.in - done")
