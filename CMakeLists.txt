@@ -1,7 +1,7 @@
 # =============================================================================
 # General settings
 # -----------------------------------------------------------------------------
-cmake_minimum_required(VERSION 3.18) # Travis (bionic) runs on CMake 3.12
+cmake_minimum_required(VERSION 3.17) # Travis (bionic) runs on CMake 3.12
 include(cmake/LogSystem/Logger.cmake)
 
 # =============================================================================
@@ -35,6 +35,14 @@ project(
 
 # Load FetchContent module.
 include(FetchContent)
+
+find_package( GTest )
+
+if (NOT GTest_FOUND)
+LogWarn("Google Test not found")
+else()
+LogInfo("Google Test found")
+endif()
 
 # Declare GoogleTest as the content to fetch.
 FetchContent_Declare(
