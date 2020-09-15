@@ -1,0 +1,3 @@
+# common-project-include.include
+
+include("${CMAKE_CURRENT_SOURCE_DIR}/project-meta-info.in")

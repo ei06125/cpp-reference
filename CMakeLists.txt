@@ -1,9 +1,11 @@
 # =============================================================================
 # General settings
 # -----------------------------------------------------------------------------
-cmake_minimum_required(VERSION 3.15..3.18) # Travis runs on CMake 3.12
+cmake_minimum_required(VERSION 3.15..3.18) # Travis (bionic) runs on CMake 3.12
 
-include("${CMAKE_CURRENT_LIST_DIR}/project-meta-info.in")
+set(CMAKE_PROJECT_INCLUDE_BEFORE
+    "${CMAKE_CURRENT_LIST_DIR}/project-meta-info.in")
+
 project(
   CppTemplateProject
   VERSION ${project_version}
