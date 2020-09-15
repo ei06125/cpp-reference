@@ -1,8 +1,13 @@
 # =============================================================================
 # General settings
 # -----------------------------------------------------------------------------
-cmake_minimum_required(VERSION 3.12) # Travis runs on CMake 3.12
-project(CppTemplateProject)
+cmake_minimum_required(VERSION 3.15..3.18) # Travis runs on CMake 3.12
+message(STATUS "[DEBUG] CMAKE_VERSION: ${CMAKE_VERSION}")
+project(
+  CppTemplateProject
+  VERSION 1.0
+  DESCRIPTION "C++ Starter Project Template"
+  LANGUAGES CXX)
 
 # =============================================================================
 # Compiler settings
