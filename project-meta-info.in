@@ -1,0 +1,10 @@
+# project-meta-info.in
+
+# The version number of this project.
+set( project_version 1.0.0)
+# The description of this project.
+set(project_description "C++ Starter Project Template")
+# The homepage of this project.
+set(project_homepage "https://www.example.com")
+# The language of this project.
+set(project_language CXX)
