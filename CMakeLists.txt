@@ -1,7 +1,7 @@
 # =============================================================================
 # General settings
 # -----------------------------------------------------------------------------
-cmake_minimum_required(VERSION 3.17) # Travis (bionic) runs on CMake 3.12
+cmake_minimum_required(VERSION 3.16.2) # Travis (focal) runs on CMake 3.16.2
 include(cmake/LogSystem/Logger.cmake)
 
 # =============================================================================
