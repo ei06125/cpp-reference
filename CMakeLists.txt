@@ -38,10 +38,11 @@ include(FetchContent)
 # Google Test
 option(BUILD_PROJECT_TESTS "Build project tests." ON)
 if(BUILD_PROJECT_TESTS)
-  logwarn("Building project tests")
+  LogTrace("Building project tests")
   set(CMAKE_PROJECT_INCLUDE_BEFORE
       "${ProjectExternalFolder}/googletest/GoogleTest-helper.cmake")
   include(${ProjectExternalFolder}/googletest/CMakeLists.txt)
+  LogTrace("Building project tests - done")
 endif()
 
 # =============================================================================
