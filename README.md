@@ -43,16 +43,16 @@ layout of the `build` directory is not prescribed. Multiple subdirectories of
 #### include
 The purpose of the `include` directory is to hold public API headers.
 
-The `include` directory should not be used if using [Merged File Placement](#MergedFilePlacement).
+The `include` directory should not be used if using [Merged File Placement](#Merged-File-Placement).
 
 #### src
 Note: The `src` and `include` directories are very closely related. Be sure to
 also read its section in addition to this one.
 
 The purpose and content of `src` depends on whether the project authors choose
-to follow [Merged File Placement](#Merged File Placement) or [Separate File Placement](#Separate File Placement).
+to follow [Merged File Placement](#Merged-File-Placement) or [Separate File Placement](#Separate-File-Placement).
 
-See [Library Source Layout](#Library Source Layout).
+See [Library Source Layout](#Library-Source-Layout).
 
 #### tests
 This directory is not required.
