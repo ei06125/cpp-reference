@@ -1,7 +1,7 @@
 # cpp-template
 A C++ Template Project
 
-[![Build Status](https://travis-ci.org/ei06125/cpp-template.svg?branch=master)](https://travis-ci.org/ei06125/cpp-template)
+[![Build Status](https://travis-ci.com/ei06125/cpp-template.svg?branch=master)](https://travis-ci.com/ei06125/cpp-template)
 [![Build Stats](https://ci.appveyor.com/api/projects/status/05mfqbb523tnw7kw?svg=true)](https://ci.appveyor.com/project/ei06125/cpp-template)
 
 ## Introduction
@@ -13,6 +13,36 @@ A C++ Template Project
 ...
 
 ## Project Architecture
+
+This section describes the project overall architecture.
+This architecture was built upon the work of **John Lakos** and
+ the convention described in [The Pitchfork Layout](https://api.csswg.org/bikeshed/?force=1&url=https://raw.githubusercontent.com/vector-of-bool/pitchfork/develop/data/spec.bs#intro).
+
+### Top-level files
+
+*"The Pitchfork Layout prescribes several files that should be present in the root of the project."*
+
+I decided to use the following files as listed and described below.
+
+#### .clang-format
+
+"*[ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) describes a set of tools that are built on top of [LibFormat](https://clang.llvm.org/docs/LibFormat.html).
+it can support your workflow in a variety of ways, including a standalone tool and editor integrations.*"
+
+This Template Project uses a customized formatting style, configured in the [.clang-format](.clang-format) file.
+Available style options are described in [Clang-Format Style Options](https://clang.llvm.org/docs/ClangFormatStyleOptions.html).
+
+#### .clang-tidy
+
+#### .gitignore
+
+#### .travis.yml
+
+#### CMakeLists.txt
+
+#### LICENSE
+
+#### README.md
 
 ### Top-level directories
 
