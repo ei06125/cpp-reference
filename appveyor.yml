@@ -7,9 +7,14 @@ build_script:
 
     cd build
 
-    cmake c:\projects\source -G "Visual Studio 16"
+    pip install --user conan
 
-    cmake --build . --config "Debug"
+    set PATH=%PATH%;C:\Users\appveyor\AppData\Roaming\Python\Scripts
+
+    cmake c:\projects\source -G "Visual Studio 16 2019" -DCMAKE_BUILD_TYPE:STRING=Release
+
+    cmake --build . --config "Release"
 
 test_script:
 - cmd: ctest -C Debug
+
