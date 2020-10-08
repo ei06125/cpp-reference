@@ -2,6 +2,9 @@ dist: focal
 sudo: false
 language: cpp
 
+install:
+  - pip install --user conan cmake
+
 script:
   - cmake .
   - cmake --build . -- -j2
