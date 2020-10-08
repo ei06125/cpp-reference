@@ -1,10 +1,5 @@
 #include "stl.hpp"
 
-class TestClass {
-  public:
-	TestClass() = default;
-};
-
 /******************************************************************************
  * @brief Application entry point
  * - The main function builds the objects necessary for the system,

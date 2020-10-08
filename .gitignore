@@ -1,9 +1,6 @@
 # Created by Pedro André Oliveira
-output/
-vscode-build/
-build
-vs-build/
-.clangd
+*build*/
+
 
 # Created by https://www.gitignore.io/api/c,c++,node,clion,visualstudio,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=c,c++,node,clion,visualstudio,visualstudiocode
@@ -264,10 +261,10 @@ public/
 
 ### VisualStudioCode ###
 .vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+#!.vscode/settings.json
+#!.vscode/tasks.json
+#!.vscode/launch.json
+#!.vscode/extensions.json
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
