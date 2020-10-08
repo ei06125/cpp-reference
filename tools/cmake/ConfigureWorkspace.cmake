@@ -1,15 +1,9 @@
 # =============================================================================
 # § Top-Level Directories
 # -----------------------------------------------------------------------------
-# For more information:
-# https://api.csswg.org/bikeshed/?force=1&url=https://raw.githubusercontent.com/vector-of-bool/pitchfork/develop/data/spec.bs
+# For more information: https://api.csswg.org/bikeshed/?force=1&url=https://raw.
+# githubusercontent.com/vector-of-bool/pitchfork/develop/data/spec.bs
 # =============================================================================
-
-# =============================================================================
-# cmake
-# -----------------------------------------------------------------------------
-set(ProjectCMakeFolder ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
-file(MAKE_DIRECTORY ${ProjectCMakeFolder})
 
 # =============================================================================
 # build
@@ -140,6 +134,14 @@ file(MAKE_DIRECTORY ${ProjectDataFolder})
 set(ProjectToolsFolder ${CMAKE_CURRENT_SOURCE_DIR}/tools)
 file(MAKE_DIRECTORY ${ProjectToolsFolder})
 
+# cmake - C++ Build System Generator
+set(ProjectCMakeFolder ${ProjectToolsFolder}/cmake)
+file(MAKE_DIRECTORY ${ProjectCMakeFolder})
+
+# conan - C++ Open Source Package Manager
+set(ProjectConanFolder ${ProjectToolsFolder}/conan)
+file(MAKE_DIRECTORY ${ProjectCMakeFolder})
+
 # =============================================================================
 # § docs
 # -----------------------------------------------------------------------------
@@ -200,8 +202,8 @@ file(MAKE_DIRECTORY ${ProjectExtrasFolder})
 # directories as include search directories. This ensures that the library
 # itself can access all files within both source directories.
 #
-# If not using merged tests, all tests should be placed within the tests/
-# top-level directory. There are no mandates on the layout within tests/.
+# If not using merged tests, all tests should be placed within the tests/ top-
+# level directory. There are no mandates on the layout within tests/.
 #
 # .............................................................................
 # § Merged File Placement

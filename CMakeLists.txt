@@ -3,12 +3,12 @@
 # -----------------------------------------------------------------------------
 # Travis (focal) runs on CMake 3.16.2
 cmake_minimum_required(VERSION 3.16.2..3.18.2)
-include(cmake/LogSystem/Logger.cmake)
+include(tools/cmake/LogSystem/Logger.cmake)
 
 # =============================================================================
 # Workspace settings
 # -----------------------------------------------------------------------------
-include(cmake/ConfigureWorkspace.cmake)
+include(tools/cmake/ConfigureWorkspace.cmake)
 
 # =============================================================================
 # Project settings
@@ -38,7 +38,8 @@ include(FetchContent)
 # Google Test
 option(BUILD_PROJECT_TESTS "Build project tests." ON)
 if(BUILD_PROJECT_TESTS)
-  LogTrace("Building project tests")
+  add_compile_definitions(_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING=1)
+  logwarn("Generating Test Build System")
   set(CMAKE_PROJECT_INCLUDE_BEFORE
       "${ProjectExternalFolder}/googletest/GoogleTest-helper.cmake")
   include(${ProjectExternalFolder}/googletest/CMakeLists.txt)
@@ -56,7 +57,7 @@ endif()
 # -----------------------------------------------------------------------------
 add_executable(main)
 target_sources(main PRIVATE ${ProjectSourceFolder}/main.cpp)
-target_compile_features(main PRIVATE cxx_lambda_init_captures)
+target_compile_features(main PRIVATE cxx_lambda_init_captures cxx_std_17)
 target_include_directories(main PUBLIC ${ProjectIncludeFolder})
 target_precompile_headers(main PRIVATE ${ProjectIncludeFolder}/stl.hpp)
 
