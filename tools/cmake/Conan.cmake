@@ -16,9 +16,11 @@ macro(run_conan)
   conan_cmake_run(
     REQUIRES
     ${CONAN_EXTRA_REQUIRES}
+    benchmark/1.5.2
     catch2/2.11.0
     docopt.cpp/0.6.2
     fmt/6.2.0
+    gtest/1.10.0
     spdlog/1.5.0
     OPTIONS
     ${CONAN_EXTRA_OPTIONS}

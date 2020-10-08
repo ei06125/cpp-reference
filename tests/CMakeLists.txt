@@ -53,5 +53,10 @@ catch_discover_tests(
 
 if(ENABLE_FUZZING)
   message("Building Fuzz Tests, using fuzzing sanitizer https://www.llvm.org/docs/LibFuzzer.html")
-  add_subdirectory(fuzz_test)
+  add_subdirectory(fuzz_tests)
+endif()
+
+if(ENABLE_BENCHMARK)
+  message("Building Performance Tests, using Gooel Benchmark https://github.com/google/benchmark")
+  add_subdirectory(performance_tests)
 endif()
