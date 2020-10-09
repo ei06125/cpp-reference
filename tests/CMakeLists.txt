@@ -51,9 +51,20 @@ catch_discover_tests(
   --reporter=xml
   --out=relaxed_constexpr.xml)
 
+
+  
+option(ENABLE_FUZZING "Enable Fuzzing Builds" OFF)
+option(ENABLE_VALGRIND "Enable Valgrind Test Builds" ON)
+option(ENABLE_BENCHMARK "Enable Performance Test Builds" ON)
+
 if(ENABLE_FUZZING)
   message("Building Fuzz Tests, using fuzzing sanitizer https://www.llvm.org/docs/LibFuzzer.html")
   add_subdirectory(fuzz_tests)
+endif()
+
+if(ENABLE_VALGRIND)
+  message("Building Valgrind Tests, using Valgrind https://valgrind.org")
+  add_subdirectory(memory_tests)
 endif()
 
 if(ENABLE_BENCHMARK)
