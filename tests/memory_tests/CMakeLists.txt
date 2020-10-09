@@ -6,4 +6,4 @@ IF(CMAKE_COMPILER_IS_GNUCC)
 ENDIF(CMAKE_COMPILER_IS_GNUCC)
 
 target_link_libraries( mem_tester PRIVATE project_options project_warnings)
-add_test(NAME mem_tester_run COMMAND mem_tester)
+# add_test(NAME mem_tester_run COMMAND mem_tester)
