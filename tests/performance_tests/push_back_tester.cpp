@@ -1,10 +1,10 @@
 #include <benchmark/benchmark.h>
 #include <vector>
 
-// ------------------------------------------------------------------------- //
-// [https://www.youtube.com/watch?v=nXaxk27zwlk](CppCon 2015: Chandler Carruth
-// "Tuning C++: Benchmarks, and CPUs, and Compilers! Oh My!")
-// ------------------------------------------------------------------------- //
+/******************************************************************************
+@link: [https://www.youtube.com/watch?v=nXaxk27zwlk](CppCon 2015: Chandler
+Carruth "Tuning C++: Benchmarks, and CPUs, and Compilers! Oh My!")
+******************************************************************************/
 
 /**
  * @brief Magical escape function that:
@@ -19,6 +19,9 @@ static void escape(void *p) {
 	asm volatile("" : : "g"(p) : "memory");
 }
 
+/**
+ * @brief Fakes a volatile write on all memory, preventing optimization
+ */
 static void clobber() {
 	// magically write to all memory
 	asm volatile("" : : : "memory");
